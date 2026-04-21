@@ -1,54 +1,54 @@
 # Framework web asynchrone
-fastapi==0.115.12
-uvicorn[standard]==0.34.0
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
 
 # Base de données PostgreSQL
-sqlalchemy==2.0.40
-asyncpg==0.30.0
-alembic==1.15.2
-psycopg2-binary==2.9.10
+sqlalchemy==2.0.23
+asyncpg==0.29.0
+alembic==1.12.1
+psycopg2-binary==2.9.9
 
 # Authentification et sécurité
-python-jose[cryptography]==3.4.0
+python-jose[cryptography]==3.3.0
 passlib[bcrypt]==1.7.4
-python-multipart==0.0.20
-bcrypt==4.3.0
+python-multipart==0.0.6
+bcrypt==4.1.2
 
-# Validation et sérialisation
-pydantic==2.11.4
-pydantic-settings==2.8.1
-email-validator==2.2.0
+# Validation et sérialisation (versions compatibles)
+pydantic==2.5.0
+pydantic-settings==2.1.0
+email-validator==2.1.0
 
 # Cache Redis
-redis==5.2.1
+redis==5.0.1
 aioredis==2.0.1
 
 # Paiement Stripe
-stripe==8.9.0
+stripe==7.14.0
 
 # APIs externes
-httpx==0.28.1
-aiohttp==3.11.16
+httpx==0.25.1
+aiohttp==3.9.5
 
 # Traitement d'images et vidéos
-Pillow==11.2.1
+Pillow==10.2.0
 python-magic==0.4.27
-moviepy==2.2.1
+moviepy==1.0.3
 
 # Génération PDF
-reportlab==4.3.1
-weasyprint==65.1
+reportlab==4.0.9
+weasyprint==60.2
 
 # Analyse NLP
-openai==1.75.0
+openai==1.12.0
 
 # Utilitaires
-python-dotenv==1.1.0
-python-dateutil==2.9.0.post0
+python-dotenv==1.0.0
+python-dateutil==2.8.2
 
 # Chiffrement des données (RGPD)
-cryptography==44.0.2
+cryptography==42.0.5
 
 # Tests
-pytest==8.3.5
-pytest-asyncio==0.26.0
+pytest==8.0.0
+pytest-asyncio==0.23.5
