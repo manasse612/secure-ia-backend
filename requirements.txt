@@ -1,0 +1,54 @@
+# Framework web asynchrone
+fastapi==0.115.12
+uvicorn[standard]==0.34.0
+
+# Base de données PostgreSQL
+sqlalchemy==2.0.40
+asyncpg==0.30.0
+alembic==1.15.2
+psycopg2-binary==2.9.10
+
+# Authentification et sécurité
+python-jose[cryptography]==3.4.0
+passlib[bcrypt]==1.7.4
+python-multipart==0.0.20
+bcrypt==4.3.0
+
+# Validation et sérialisation
+pydantic==2.11.4
+pydantic-settings==2.8.1
+email-validator==2.2.0
+
+# Cache Redis
+redis==5.2.1
+aioredis==2.0.1
+
+# Paiement Stripe
+stripe==8.9.0
+
+# APIs externes
+httpx==0.28.1
+aiohttp==3.11.16
+
+# Traitement d'images et vidéos
+Pillow==11.2.1
+python-magic==0.4.27
+moviepy==2.2.1
+
+# Génération PDF
+reportlab==4.3.1
+weasyprint==65.1
+
+# Analyse NLP
+openai==1.75.0
+
+# Utilitaires
+python-dotenv==1.1.0
+python-dateutil==2.9.0.post0
+
+# Chiffrement des données (RGPD)
+cryptography==44.0.2
+
+# Tests
+pytest==8.3.5
+pytest-asyncio==0.26.0
