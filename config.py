@@ -69,14 +69,18 @@ class Settings(BaseSettings):
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
-        # Générer une clé automatiquement si non définie
+        # En dev, générer une clé automatiquement si non définie
+        # En prod, SECRET_KEY DOIT être défini explicitement pour éviter les déconnexions
         if not self.secret_key:
-            import secrets
-            self.secret_key = secrets.token_urlsafe(64)
             if self.debug:
+                import secrets
+                self.secret_key = secrets.token_urlsafe(32)
                 print("[WARN] SECRET_KEY auto-générée pour dev local")
             else:
-                print("[WARN] SECRET_KEY auto-générée pour production (définissez-en une fixe pour éviter les déconnexions)")
+                raise ValueError(
+                    "SECRET_KEY manquant ! Définissez-la dans les variables d'environnement Render. "
+                    "Générez-en une avec: python -c \"import secrets; print(secrets.token_urlsafe(64))\""
+                )
 
     class Config:
         # Charger les variables depuis le fichier .env
