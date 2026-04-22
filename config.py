@@ -27,7 +27,7 @@ class Settings(BaseSettings):
     redis_url: str = "redis://localhost:6379/0"
 
     # --- Authentification JWT ---
-    secret_key: str = None  # Défini dans .env ou généré aléatoirement
+    secret_key: Optional[str] = None  # Défini dans .env ou généré aléatoirement
     algorithm: str = "HS256"
     access_token_expire_minutes: int = 30
     refresh_token_expire_days: int = 7
